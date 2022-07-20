@@ -1,11 +1,10 @@
 import React from 'react';
-import PortpholioList from './portpholioList
-js';
+import PortfolioList from './portfolioList.js';
 
-export default function Main() {
+export default function Main({ content }) {
   return (
     <main className="main">
-      <PortpholioList />
+      <PortfolioList portfolioData={content} />
     </main>
   );
 }

@@ -79,3 +79,68 @@ picture {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
 }
+
+:root {
+  --light-green-color: #99ff99;
+  --carrot-color: #f36223;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  color: #333;
+}
+
+.portfolio-article {
+  position: relative;
+  width: fit-cpntent;
+  background-color: #333;
+  border: 1px dashed red;
+  overflow: hidden;
+}
+
+.portfolio-article figcaption {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+}
+
+.portfolio-article__desc {
+  position: absolute;
+  color: #fff;
+  transform: translateY(100%);
+}
+
+.portfolio-article:hover .portfolio-article__desc {
+  transform: translateY(-100%);
+}
+
+.portfolio-article figcaption,
+.portfolio-article__desc {
+  transition: .2s cubic-bezier(1, -1, 2, 3);
+}
+
+.footer {
+  color: #fff;
+}
+
+@media(max-width: 500px) {
+  .container {
+    max-width: 480px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .header {
+    padding-top: 16px;
+    padding-bottom: 18px;
+  }
+  
+  .header__title {
+    font-size: 16px;
+    font-style: normal;
+  }
+}
